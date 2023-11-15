@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fomenko</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+        <body background="fon-image.jpg">
+            <div class="wrapper">
+              <header class="header">
+                <nav id="main-nav">
+                  <div class="logo-holder">
+                      <img src="logo-image.png" alt="Flowers"
+                      class="logo-img">Flowers Shop
+                  </div>
+                  <ul id="main-menu">
+                    <li class="main-menu-item"><a href="#catalog">Каталог</a></li>
+                    <li class="main-menu-item"><a href="#calculator">Калькулятор</a></li>
+                    <li class="main-menu-item"><a href="#openFormButton">Форма</a></li>
+                </ul>
+              </nav>
+              </header>
+             <div class="content">
+                <div class="all">
+                    <input checked type="radio" name="respond" id="desktop">
+                    <article id="slider">
+                     <input checked type="radio" name="slider" id="switch1">
+                     <input type="radio" name="slider" id="switch2">
+                     <input type="radio" name="slider" id="switch3">
+                     <input type="radio" name="slider" id="switch4">
+                     <input type="radio" name="slider" id="switch5">
+                     <input type="radio" name="slider" id="switch6">
+                     <input type="radio" name="slider" id="switch7">
+                     <input type="radio" name="slider" id="switch8">
+                     <div id="slides">
+                         <div id="overflow">
+                             <div class="image">
+                                 <article><img src="1.png"></article>
+                                 <article><img src="2.png"></article>
+                                 <article><img src="3.png"></article>
+                                 <article><img src="4.png"></article>
+                                 <article><img src="5.png"></article>
+                                 <article><img src="6.png"></article>
+                                 <article><img src="7.png"></article>
+                                 <article><img src="8.png"></article>
+                             </div>
+                         </div>
+                     </div>
+                     <div id="controls">
+                         <label for="switch1"></label>
+                         <label for="switch2"></label>
+                         <label for="switch3"></label>
+                         <label for="switch4"></label>
+                         <label for="switch5"></label>
+                         <label for="switch6"></label>
+                         <label for="switch7"></label>
+                         <label for="switch8"></label>
+                     </div>
+                     <div id="active">
+                         <label for="switch1"></label>
+                         <label for="switch2"></label>
+                         <label for="switch3"></label>
+                         <label for="switch4"></label>
+                         <label for="switch5"></label>
+                         <label for="switch6"></label>
+                         <label for="switch7"></label>
+                         <label for="switch8"></label>
+                     </div>
+                    </article>
+                 </div>
+                 <div id="calculator">
+                    <div class="option">
+                    <label for="productOption">Цветы:</label>
+                    <select id="productOption">
+                      <option value="option1">Розы (+150₽)</option>
+                      <option value="option2">Тюльпаны (+100₽)</option>
+                      <option value="option3">Ирисы (+200₽)</option>
+                      <option value="option4">Гвоздики (+50₽)</option>
+                      <option value="option5">Каллы (+170₽)</option>
+                      <option value="option6">Фиалки (+70₽)</option>
+                      <option value="option7">Пионы (+90₽)</option>
+                      <option value="option8">Лилии (+150₽)</option>
+                    </select>
+
+                    <label for="quantity">Количество цветов:</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                </div>
+                   
+                    <input type="radio" name="serviceType" value="basic" checked> Доставка (+100₽)
+                    <input type="radio" name="serviceType" value="standard"> Самовывоз
+                    
+                    <div class="productOption">
+                    <label for="productProperty"></label>
+                    <input type="checkbox" id="productProperty"> Фирменная упаковка (+150₽)
+                    </div>
+                    <h3>Цена: <span id="price">0</span> ₽</h3>
+                  </div>
+                  <button id="openFormButton">Открыть форму обратной связи</button>
+                  <div id="feedbackForm" class="hidden">
+                    <form id="feedbackForm">
+                      <input type="text" id="fullName" placeholder="ФИО" required>
+                      <input type="email" id="email" placeholder="Email" required>
+                      <input type="tel" id="phone" placeholder="Телефон">
+                      <input type="text" id="organization" placeholder="Организация">
+                      <textarea id="message" placeholder="Сообщение" required></textarea>
+                      <label for="agree">Согласие с политикой обработки персональных данных</label>
+                      <input type="checkbox" id="agree" required>
+                      <button type="submit">Отправить</button>
+                    </form>
+                  </div>
+                  <div id="feedbackMessage" class="hidden"></div>
+                </div>
+                </div>
+    </body>
+    <script src='script.js'></script>
+</html>
