@@ -88,22 +88,22 @@
                     </div>
                     <h3>Цена: <span id="price">0</span> ₽</h3>
                   </div>
-                  <button id="openFormButton">Открыть форму обратной связи</button>
-                  <div id="feedbackForm" class="hidden">
-                    <form id="feedbackForm">
-                      <input type="text" id="fullName" placeholder="ФИО" required>
-                      <input type="email" id="email" placeholder="Email" required>
-                      <input type="tel" id="phone" placeholder="Телефон">
-                      <input type="text" id="organization" placeholder="Организация">
-                      <textarea id="message" placeholder="Сообщение" required></textarea>
-                      <label for="agree">Согласие с политикой обработки персональных данных</label>
-                      <input type="checkbox" id="agree" required>
-                      <button type="submit">Отправить</button>
-                    </form>
-                  </div>
-                  <div id="feedbackMessage" class="hidden"></div>
-                </div>
-                </div>
+                 <button id="openFormButton">Открыть форму обратной связи</button>
+<div id="feedbackForm" class="hidden">
+  <form id="feedbackForm" action="sendEmail.php" method="post">
+    <input type="text" id="fullName" name="fullName" placeholder="ФИО" required>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <input type="tel" id="phone" name="phone" placeholder="Телефон">
+    <input type="text" id="organization" name="organization" placeholder="Организация">
+    <textarea id="message" name="message" placeholder="Сообщение" required></textarea>
+    <label for="agree">Согласие с политикой обработки персональных данных</label>
+    <input type="checkbox" id="agree" required>
+    <button type="submit">Отправить</button>
+  </form>
+</div>
+<div id="feedbackMessage" class="hidden"></div>
+</div>
+</div>
     </body>
     <script src='script.js'></script>
 </html>
