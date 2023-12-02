@@ -189,7 +189,7 @@ label, a{ /*при наведении на стрелки или переклю�
 #controls label{ /*прозрачность стрелок при отводе курсора*/
 	transition: opacity 0.2s ease-out;
 }
-#feedbackForm {
+/* #feedbackForm {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -201,4 +201,94 @@ label, a{ /*при наведении на стрелки или переклю�
   }
   .hidden {
     display: none;
+  } */
+  @media (min-width: 800px) {
+    input {
+      padding: 10px;
+      margin: 10px;
+      font-size: 22px;
+      border-radius: 5px;
+      border: 2px solid gray;
+    }
+    input:hover {
+      border: 2px solid rgb(0, 38, 255);
+    }
+    input:focus {
+      box-shadow: 0px 0px 15px #2326ff;
+    }
+    textarea {
+      font-size: 20px;
+      resize: none;
+      border-radius: 10px;
+    }
+    textarea:hover {
+      border: 1px solid rgb(0, 38, 255);
+    }
+    textarea:focus {
+      box-shadow: 0px 0px 15px #2326ff;
+    }
+    .popup {
+      width: 1000px;
+    }
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .popup_inp {
+      padding: 20px 80px;
+      border-radius: 20px;
+      border: 2px solid rgb(42, 85, 165);
+      color: rgb(42, 85, 165);
+    }
   }
+  @media (max-width: 800px) {
+    label {
+      margin: 20px;
+    }
+    h1 {
+      margin-left: 20px;
+    }
+    form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .popup {
+      width: 400px;
+    }
+    .popup_content {
+      max-width: 300px;
+      font-size: 20px;
+    }
+    .input {
+      font-size: 20px;
+    }
+    .input:focus {
+      box-shadow: 0px 0px 15px #2326ff;
+    }
+    .inp {
+      margin: 10px;
+      padding: 10px;
+      margin-left: 20px;
+    }
+    textarea {
+      margin: 10px;
+      font-size: 10px;
+      resize: none;
+      width: 300px;
+      margin-left: 20px;
+    }
+    textarea:focus {
+      box-shadow: 0px 0px 15px #2326ff;
+    }
+    .popup_inp {
+      padding: 20px 80px;
+      margin: auto;
+      max-width: 300px;
+      border-radius: 20px;
+      border: 2px solid rgb(42, 85, 165);
+      color: rgb(42, 85, 165);
+    }
+  }/*# sourceMappingURL=style.css.map */
