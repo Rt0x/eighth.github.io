@@ -88,23 +88,73 @@
                     </div>
                     <h3>Цена: <span id="price">0</span> ₽</h3>
                   </div>
-                 <button id="openFormButton">Открыть форму обратной связи</button>
-<div id="feedbackForm" class="hidden">
-  <form id="feedbackForm" method="POST"
-action="https://api.slapform.com/{MK3j5y4Am}">
-    <input type="text" id="fullName" name="fullName" placeholder="ФИО" required>
-    <input type="email" id="email" name="email" placeholder="Email" required>
-    <input type="tel" id="phone" name="phone" placeholder="Телефон">
-    <input type="text" id="organization" name="organization" placeholder="Организация">
-    <textarea id="message" name="message" placeholder="Сообщение" required></textarea>
-    <label for="agree">Согласие с политикой обработки персональных данных</label>
-    <input type="checkbox" id="agree" required>
-    <button type="submit">Отправить</button>
-  </form>
-</div>
-<div id="feedbackMessage" class="hidden"></div>
-</div>
-</div>
+                 <div class="popup_block" id="popup">
+                    <div class="popup">
+                        <div class="close" id="popup_close">
+                            <p>X</p>
+                        </div>
+                        <div class="popup_content" id="popup_content">
+                            <form
+                                id="myForm"
+                                class="ajaxForm" 
+                                action="https://formcarry.com/s/d9wmDFLQWv"
+                                method="POST"
+                                enctype="multipart/form-data"
+                            >
+                                <h1>Форма обратной связи:</h1>
+                                <input class="inp" name="Email" type="text" placeholder="Ваше имя" required>
+                                <input class="inp" name="Tell" type="email" placeholder="test_mail@gmail.com" required>
+                                <input class="inp" name="Conpuny" type="tel" placeholder="+7 123 456 78 90" required> 
+                                <input class="inp" name="Massage" type="text" placeholder="Google" required> 
+                                <textarea name="describe" cols="30" rows="7" id="textArea"></textarea>
+                                <p>
+                                    <input type="checkbox" class="check" required>
+                                    Я согласен на обработку моих данных
+                                </p>
+                                <input type="submit" value="Отправить" class="popup_inp" id="popup_inp" required>
+                                <br>
+                            </form>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+                            <script>
+                                $(function(){
+                                    const form = document.getElementById('myForm');
+                                    const inputs = form.querySelectorAll('input');
+                                    let textArea = document.getElementById('textArea');
+            
+                                    $(".ajaxForm").submit(function(e){
+                                    e.preventDefault();
+                                    var href = $(this).attr("action");
+                                    $.ajax({
+                                        type: "POST",
+                                        dataType: "json",
+                                        url: href,
+                                        data: $(this).serialize(),
+                                        success: function(response){
+                                        if(response.status == "success"){
+                                            alert("We received your submission, thank you!");
+                                            inputs.forEach((element)=>{
+                                                element.value = "";
+                                            })
+                                            inputs[5].value = "Отправить";
+                                            inputs[4].checked = null;
+                                            textArea.value = "";
+                                        }else{
+                                            alert("An error occured: " + response.message);
+                                            inputs.forEach((element)=>{
+                                                element.value = "";
+                                            })
+                                            inputs[5].value = "Отправить";
+                                            inputs[4].checked = null;
+                                            textArea.value = "";
+                                        }
+                                        }
+                                    });
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
     </body>
     <script src='script.js'></script>
 </html>
